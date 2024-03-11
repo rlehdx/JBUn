@@ -1,0 +1,36 @@
+section {
+    height: 100vh;
+}
+
+.bg-img {
+    top: 0;
+    right: 0;
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-position: right center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+
+#js-bg1 {
+    background-image: url(https://www.unitedenergysolutions.us/wp-content/uploads/2022/01/03_United_Energy_Solutions-1024x683.jpeg);
+}
+
+#js-bg2 {
+    background-image: url(https://www.unitedenergysolutions.us/wp-content/uploads/2022/01/09_United_Energy_Solutions-1024x576.jpeg);
+}
+
+#js-bg3 {
+    background-image: url(https://www.unitedenergysolutions.us/wp-content/uploads/2022/01/08_United_Energy_Solutions-1024x622.jpeg);
+}
+
+.show .bg-img {
+    opacity: 1;
+}

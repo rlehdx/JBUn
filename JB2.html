@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JB</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="M_t.css">
+    <link rel="stylesheet" href="Slide.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<style>
+
+    .footer {
+        display: flex;
+        height: 200px;
+        justify-content: center;
+    }
+
+    .menu-ul {
+        font-size: 10px;
+    }
+
+        .menu-ul > li {
+            font-size: 12px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+            .menu-ul > li > a {
+                display: block;
+                width: auto;
+                padding: 15px;
+            }
+    /* 햄버거메뉴 시작 */
+    input[id="menuicon"] {
+        display: none;
+    }
+
+        input[id="menuicon"] + label {
+            display: block;
+            margin: 0px;
+            width: 60px;
+            height: 50px;
+            left: 1730px;
+            position: fixed;
+            right: 20px;
+            top: 55px;
+            cursor: pointer;
+            Z-index: 100;
+        }
+
+            input[id="menuicon"] + label span {
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 5px;
+                border-radius: 30px;
+                background: #000;
+                transition: all .35s;
+            }
+
+                input[id="menuicon"] + label span:nth-child(1) {
+                    top: 0;
+                }
+
+                input[id="menuicon"] + label span:nth-child(2) {
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                input[id="menuicon"] + label span:nth-child(3) {
+                    bottom: 0;
+                }
+
+        input[id="menuicon"]:checked + label {
+            z-index: 2;
+        }
+
+            input[id="menuicon"]:checked + label span {
+                background: #fff;
+            }
+
+                input[id="menuicon"]:checked + label span:nth-child(1) {
+                    top: 50%;
+                    transform: translateY(-50%) rotate(45deg);
+                }
+
+                input[id="menuicon"]:checked + label span:nth-child(2) {
+                    opacity: 0;
+                }
+
+                input[id="menuicon"]:checked + label span:nth-child(3) {
+                    bottom: 50%;
+                    transform: translateY(50%) rotate(-45deg);
+                }
+
+    div[class="sidebar"] {
+        width: 300px;
+        height: 100%;
+        background: #222;
+        position: fixed;
+        top: 0;
+        right: -400px;
+        z-index: 1;
+        transition: all .35s;
+    }
+
+    input[id="menuicon"]:checked + label + div {
+        right: 0;
+    }
+
+
+    .sitemap-ul {
+        font-size: 0;
+        width: 100px;
+        margin: 200px -10px;
+        text-align: left;
+    }
+
+        .sitemap-ul > li {
+            font-size: 40px;
+            display: inline-block;
+            
+            width: 20%;
+            letter-spacing: 5px;
+            position: relative;
+        }
+
+    a {
+        display: block;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        color: white;
+    }
+</style>
+<header>
+    <div class="header-list">
+        <h1 class="logo">
+            <a href="Main.html">
+                <img src="https://www.unitedenergysolutions.us/wp-content/uploads/2022/01/Logo_United_Energy_Solutions_250.png" class="Logo" id="Logo1" alt="슬라이드 1">
+        </h1>
+        </a>
+    </div>
+
+    <input type="checkbox" id="menuicon">
+    <label for="menuicon">
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </label>
+    <div class="sidebar">
+        <ul class="sitemap-ul">
+            <li>
+                <ul>
+                    <a href="Menu.html">Menu</a>
+
+                    <a href="index.html">Contact Us</a>
+
+                    <a href="location.html">Location</a>
+
+                    <a href="location.html">Order</a>
+                </ul>
+            </li>
+
+    </div>
+
+</header>
+<body>
+
+    <div class="contents">
+        <section>
+            <div class="content-width">
+                <div class="slideshow">
+                    <!-- Slideshow Items -->
+                    <div class="slideshow-items">
+                        <div class="item">
+                            <div class="item-image-container">
+                                <img class="item-image" src="https://www.unitedenergysolutions.us/wp-content/uploads/2022/01/03_United_Energy_Solutions-1024x683.jpeg" />
+                            </div>
+                            <!-- Staggered Header Elements -->
+                            <div class="item-header">
+                                <span class="vertical-part"><b>B</b></span>
+                                <span class="vertical-part"><b>E</b></span>
+                                <span class="vertical-part"><b>S</b></span>
+                                <span class="vertical-part"><b>T</b></span>
+                            </div>
+                            <!-- Staggered Description Elements -->
+                            <div class="item-description">
+                                <span class="vertical-part">
+                                    <b>United Energy</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>Solutions</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>offers</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>clean</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>energy,</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>rebates</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>for</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>PSE&G</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>and</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>JCP&L</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>in </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>NJ. </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>By</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>upgrading</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>to </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>energy-efficient</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>LED </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>lighting,</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>businesses </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>can </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>save </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>on </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>initial </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>costs</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>and </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>reduce </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>installation </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>expenses </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>through </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>government </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>incentives</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>and </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>rebate </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>programs.</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>Explore  </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>LED</b>
+                                </span> <span class="vertical-part">
+                                    <b>lighting  </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>rebate</b>
+                                </span> <span class="vertical-part">
+                                    <b>opportunities  </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>for</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>making </b>
+                                </span> <span class="vertical-part">
+                                    <b>your   </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>commercial  </b>
+                                </span> <span class="vertical-part">
+                                    <b>property   </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>more </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>energy-efficient </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>in  </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>New  </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>Jersey.
+
+                                    </b>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-image-container">
+                                <img class="item-image" src="https://www.unitedenergysolutions.us/wp-content/uploads/2022/01/09_United_Energy_Solutions-1024x576.jpeg" />
+                            </div>
+                            <!-- Staggered Header Elements -->
+                            <div class="item-header">
+                                <span class="vertical-part"><b>B</b></span>
+                                <span class="vertical-part"><b>E</b></span>
+                                <span class="vertical-part"><b>T</b></span>
+                                <span class="vertical-part"><b>T</b></span>
+                                <span class="vertical-part"><b>E</b></span>
+                                <span class="vertical-part"><b>R</b></span>
+                            </div>
+                            <!-- Staggered Description Elements -->
+                            <div class="item-description">
+                                <span class="vertical-part">
+                                    <b>Spotify</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>ipsum</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>dolor</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>sit</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>amet,</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>consectetur</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>adipiscing</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>elit.</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>Pellentesque</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>elementum</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>gravida</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>ex</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>at</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>maximus.</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>Nullam</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>quis</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>leo</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>ipsum.</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>Lorem</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>ipsum</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>Nam</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>consectetur</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>malesuada</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>blandit.</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>Mauris</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>vulputate</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>purus</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>id</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>dolor</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>euismod</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>varius.</b>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-image-container">
+                                <img class="item-image" src="Light.webp" />
+                            </div>
+                            <!-- Staggered Header Elements -->
+                            <div class="item-header">
+                                <span class="vertical-part"><b>B</b></span>
+                                <span class="vertical-part"><b>A</b></span>
+                                <span class="vertical-part"><b>C</b></span>
+                                <span class="vertical-part"><b>K</b></span>
+                            </div>
+                            <!-- Staggered Description Elements -->
+                            <div class="item-description">
+                                <span class="vertical-part">
+                                    <b>Airbnb</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>ipsum</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>dolor</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>sit</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>amet,</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>consectetur</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>adipiscing</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>elit.</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>Pellentesque</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>elementum</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>gravida</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>ex</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>at</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>maximus.</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>Nullam</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>quis</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>leo</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>ipsum.</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>Lorem</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>ipsum</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>Nam</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>consectetur</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>malesuada</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>blandit.</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>Mauris</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>vulputate</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>purus</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>id</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>dolor</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>euismod</b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>varius.</b>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <ul>
+                            <li class="control" data-index="0"></li>
+                            <li class="control" data-index="1"></li>
+                            <li class="control" data-index="2"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+                
+            </div><!--/step1 -->
+        </section>
+
+
+        <section>
+            <div class="step" id="js-step2">
+                <div class="bg-img" id="js-bg2"></div>
+                <div class="contents_inner">
+                    <p>texttexttext2</p>
+                </div>
+            </div><!--/step2 -->
+        </section>
+
+
+        <section>
+            <div class="step" id="js-step3">
+                <div class="bg-img" id="js-bg3"></div>
+                <div class="contents_inner">
+                    <p>texttexttext3</p>
+                </div>
+            </div><!--/step3 -->
+        </section>
+
+    </div>
+    <script src="J2.js"></script>
+</body>
+</html>
